@@ -50,7 +50,7 @@ body {
 }
 
 #dashboard {
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
@@ -68,8 +68,13 @@ aside {
 }
 
 header {
-    padding: 1em;
+    padding: 1em 3em 1em 3em;
     background-color: var(--baby-powder);
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3em;
 }
 
 main {
@@ -117,6 +122,115 @@ main {
     transform: rotate(360deg);
 }
 
-#logo:hover {
+#logo:hover,
+img:hover {
     cursor: pointer;
+}
+
+/* Header */
+
+#welcome-user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 2em;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 2em;
+}
+
+#search > input {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    outline-color: var(--black);
+    background-color: var(--platinum);
+    padding-left: 10px;
+}
+
+#search > input:focus {
+    caret-color: transparent;
+}
+
+
+#profile > #user-pic {
+    padding: 24px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+#profile > #user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#welcome-user {
+    align-items: flex-end;
+    column-gap: 1em;
+}
+
+#welcome-user > #user-pic {
+    padding: 32px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+#welcome-message {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#btns {
+    display: grid;
+
+    align-content: end;
+    justify-content: end;
+    column-gap: 2em;
+}
+
+#btns > button {
+    background-color: var(--black);
+    color: var(--baby-powder);
+    width: 124px;
+    height: 48px;
+
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+
+    transition: .2s ease-in-out;
+}
+
+#btns > button:hover {
+    cursor: pointer;
+    transform:scale(0.95);
+}
+
+#btns > button:active {
+    transform: scale(0.90);
+}
+
+#btns > #share {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+#btns > #upload {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#btns > #new {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
