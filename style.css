@@ -253,7 +253,6 @@ img:hover {
     box-shadow: rgba(0, 0, 0, 0.178) 0px 2px 3px;
 }
 
-.vertical-card:hover,
 .horizontal-card:hover {
     cursor: pointer;
 }
