@@ -172,9 +172,11 @@ img:hover {
 }
 
 #profile > #user-pic {
-    padding: 24px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: var(--red-pantone);
+    overflow: hidden;
 }
 
 #profile > #user-name {
@@ -190,9 +192,11 @@ img:hover {
 }
 
 #welcome-user > #user-pic {
-    padding: 32px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     background-color: var(--red-pantone);
+    overflow: hidden;
 }
 
 #welcome-message {
@@ -377,10 +381,31 @@ img:hover {
 }
 
 .vertical-card > .pic {
+    width: 48px;
+    height: 48px;
     justify-self: center;
-    padding: 28px;
     border-radius: 50%;
     background-color: var(--platinum);
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-card > .pic:nth-child(1) {
+    background-color: var(--baby-powder);
+}
+
+.vertical-card > .pic:nth-child(3) {
+    background-color: #8338ec;
+}
+
+.vertical-card > .pic:nth-child(5) {
+    background-color: #3a86ff;
+}
+
+.vertical-card > .pic:nth-child(7) {
+    background-color: var(--baby-powder);
 }
 
 .text > span {
